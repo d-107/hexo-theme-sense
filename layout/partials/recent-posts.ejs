@@ -5,10 +5,10 @@
       <div class="recent-post-item">
         <h1>
           <i class="iconfont new-article">&#xe6e3;</i>
-          <a class="article-link" href="<%=config.root + post.path%>">
+          <span class="article-link" >
             <i class="iconfont articles-tag">&#xe633;</i>
-            <%=post.title%>
-          </a>
+            <a class="title-href" href="<%=config.root + post.path%>"><%=post.title%></a>
+          </span>
           <% if (post.date) { %>
             <time class="post-time" datetime="<%=post.date.toJSON()%>">
               <%=date(post.date)%>
