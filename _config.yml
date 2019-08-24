@@ -1,7 +1,10 @@
 
 # html lang
-language: en
+language: zh-CN
 
+# site info
+description: 3wly 项目开发组自留地
+keywords: M-finder,php,laravel,技术分享,个人博客,M-finder博客
 # main menu navigation
 menu:
   Home: /
@@ -9,8 +12,28 @@ menu:
   Contact: /contact
   Archives: /archives
 
+# SubNav
+subnav:
+  github: "#"
+  weibo: "#"
+  rss: "#"
+  zhihu: "#"
+  #qq: "#"
+  #weixin: "#"
+  #jianshu: "#"
+  #douban: "#"
+  #segmentfault: "#"
+  #bilibili: "#"
+  #acfun: "#"
+  #mail: "mailto:litten225@qq.com"
+  #facebook: "#"
+  #google: "#"
+  #twitter: "#"
+  #linkedin: "#"
+
 # Miscelaneous
-favicon: /favicon.ico
+favicon: /images/favicon.ico
+logo: /images/d-107.png
 
 # stylesheets loaded in the <head>
 stylesheets:
@@ -18,5 +41,7 @@ stylesheets:
 
 # scripts loaded in the end of the body
 scripts:
+- /js/jquery-3.4.1.min.js
+- /js/sakura.js
 - /js/sense.js
 
