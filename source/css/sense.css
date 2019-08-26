@@ -302,7 +302,7 @@ h1 {
   z-index: 9999;
   top: 0;
   display: block;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .header .header-nav {
   margin: 0 45px;
@@ -324,6 +324,7 @@ h1 {
   margin-left: 15px;
   padding: 0 10px;
   transition: all 0.2s ease;
+  color: #fff;
 }
 .header .header-nav .site-nav {
   height: 75px;
@@ -344,6 +345,7 @@ h1 {
   display: inline-block;
   position: relative;
   text-align: center;
+  color: #fff;
 }
 .header .header-nav .site-nav .nav-link a:after {
   content: "";
@@ -357,14 +359,8 @@ h1 {
   background: linear-gradient(to right, #fb929e, #b4b4ff, #56B4D3);
   opacity: 0.5;
 }
-.header .header-nav .site-nav .nav-link a:hover {
-  color: #333;
-}
 .header .header-nav .site-nav .nav-link a:hover:after {
   max-width: 100%;
-}
-.header .header-nav .site-nav .nav-link .active {
-  color: #333;
 }
 .header .header-nav .site-nav .nav-link .active:after {
   max-width: 100%;

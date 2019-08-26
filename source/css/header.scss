@@ -8,7 +8,7 @@
   z-index: 9999;
   top: 0;
   display: block;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(0, 0, 0, .1);
 
   .header-nav {
     margin: 0 45px;
@@ -32,6 +32,7 @@
       margin-left: 15px;
       padding: 0 10px;
       transition: all .2s ease;
+      color: #fff;
     }
 
     .site-nav {
@@ -53,6 +54,7 @@
           display: inline-block;
           position: relative;
           text-align: center;
+          color: #fff;
 
           &:after {
             content: '';
@@ -68,7 +70,6 @@
           }
 
           &:hover {
-            color: #333;
 
             &:after {
               max-width: 100%;
@@ -77,8 +78,6 @@
         }
 
         .active {
-          color: #333;
-
           &:after {
             max-width: 100%;
           }
