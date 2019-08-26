@@ -24,3 +24,13 @@
 ::-webkit-scrollbar-thumb:vertical:active {
   background: linear-gradient(to bottom, #fb929e, #b4b4ff, #56B4D3)
 }
+
+//scrollbar
+.scrollbar {
+  position: fixed;
+  top: 0;
+  height: 3px;
+  transition-duration: 1s, 1s;
+  z-index: 99999;
+  background: #56B4D3;
+}

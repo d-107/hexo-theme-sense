@@ -1,0 +1,17 @@
+.footer {
+  font-size: 12px;
+  font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
+  text-shadow: 0 1px #fff;
+  margin: 50px auto 30px auto;
+  width: 100%;
+  text-align: center;
+  color: #333;
+  .footer-copy{
+    margin-bottom:25px;
+  }
+  a {
+    background: transparent;
+    text-decoration: none;
+    color: #56B4D3;
+  }
+}

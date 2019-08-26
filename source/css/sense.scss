@@ -68,19 +68,8 @@ h1 {
   line-height: 50px;
 }
 
-
-
-//scrollbar
-.scrollbar {
-  position: fixed;
-  top: 0;
-  height: 3px;
-  transition-duration: 1s, 1s;
-  z-index: 99999;
-  background: #56B4D3;
-}
-
 @import "./header";
+@import "./footer";
 
 
 

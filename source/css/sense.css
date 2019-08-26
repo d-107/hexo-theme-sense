@@ -223,6 +223,15 @@
   background: linear-gradient(to bottom, #fb929e, #b4b4ff, #56B4D3);
 }
 
+.scrollbar {
+  position: fixed;
+  top: 0;
+  height: 3px;
+  transition-duration: 1s, 1s;
+  z-index: 99999;
+  background: #56B4D3;
+}
+
 @font-face {
   font-family: "iconfont";
   /* project id 1368507 */
@@ -282,15 +291,6 @@ h1 {
   font-size: 32px;
   margin: 20px 0;
   line-height: 50px;
-}
-
-.scrollbar {
-  position: fixed;
-  top: 0;
-  height: 3px;
-  transition-duration: 1s, 1s;
-  z-index: 99999;
-  background: #56B4D3;
 }
 
 .header {
@@ -380,6 +380,24 @@ h1 {
     text-align: center;
   }
 }
+.footer {
+  font-size: 12px;
+  font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
+  text-shadow: 0 1px #fff;
+  margin: 50px auto 30px auto;
+  width: 100%;
+  text-align: center;
+  color: #333;
+}
+.footer .footer-copy {
+  margin-bottom: 25px;
+}
+.footer a {
+  background: transparent;
+  text-decoration: none;
+  color: #56B4D3;
+}
+
 .video-box {
   padding: 0;
   margin-bottom: 30px;
