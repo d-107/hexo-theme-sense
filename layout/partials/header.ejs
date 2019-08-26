@@ -9,7 +9,7 @@
             <% } %>
         </a>
         <div class="nav-toggle-btn"><i class="iconfont">&#xe600;</i></div>
-        <ul class="site-nav hide-nav">
+        <ul class="site-nav ">
             <% Object.keys(theme.menu).forEach(function(key) { %>
                 <li class="nav-link">
                     <a <% if(is_current(theme.menu[key])){ %>class="active" <% } %>href="<%= theme.menu[key] %>">
