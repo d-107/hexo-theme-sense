@@ -20,11 +20,6 @@
 }
 
 
-@font-face {
-  font-family: 'al-ph';
-  src: url('../font/al-ph.ttf');
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -43,7 +38,7 @@ html {
 }
 
 body {
-  font-family: din,'Hiragino Sans GB','Microsoft Yahei',Arial,sans-serif;
+  font-family: din, 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -71,14 +66,17 @@ h1 {
   margin: 20px 0;
   line-height: 50px;
 }
+
 // 滚动条样式
 ::-webkit-scrollbar {
   width: 5px;
   height: 10px;
 }
+
 ::-webkit-scrollbar-button:vertical {
   display: none
 }
+
 ::-webkit-scrollbar-corner, ::-webkit-scrollbar-track {
   background: #e2e2e2
 }
@@ -105,6 +103,7 @@ h1 {
   z-index: 99999;
   background: #56B4D3;
 }
+
 // header
 .header {
   width: 100%;
@@ -148,6 +147,8 @@ h1 {
       float: right;
       list-style: none;
       user-select: none;
+      -webkit-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
 
       .nav-link {
         display: inline-block;
@@ -173,6 +174,7 @@ h1 {
 
           &:hover {
             color: #333;
+
             &:after {
               max-width: 100%;
             }
@@ -269,22 +271,20 @@ h1 {
       left: 50%;
       transform: translate(-50%, -65%);
       z-index: 999999;
-      .social{
-        margin-top:25px;
-        a{
-          margin:0 5px;
-          &:hover{
+
+      .social {
+        margin-top: 25px;
+
+        a {
+          margin: 0 5px;
+
+          &:hover {
             color: #eee;
           }
         }
       }
     }
   }
-}
-
-// live2d
-#live2d-widget {
-  left: 0;
 }
 
 // content
@@ -303,20 +303,23 @@ h1 {
           position: relative;
           overflow: hidden;
           font-size: 18px;
-          .article-link{
+
+          .article-link {
             display: inline-block;
             vertical-align: baseline;
             zoom: 1;
             position: relative;
             padding: 0 10px 0 0;
-            .title-href{
-              max-width:350px;
+
+            .title-href {
+              max-width: 350px;
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
               display: inline-block;
             }
-            &:after{
+
+            &:after {
               content: '';
               display: block;
               width: 800px;
@@ -326,7 +329,8 @@ h1 {
               left: 100%;
             }
           }
-          .post-time{
+
+          .post-time {
             top: 0;
             right: 0;
             color: #777;
@@ -340,6 +344,7 @@ h1 {
             font-weight: 400;
             line-height: 43px;
           }
+
           .new-article {
             font-weight: normal;
             font-size: 24px;
@@ -357,8 +362,9 @@ h1 {
             padding: 13px;
             border-radius: 50%;
             vertical-align: top;
-            &:hover{
-               opacity:.8;
+
+            &:hover {
+              opacity: .8;
             }
           }
         }
