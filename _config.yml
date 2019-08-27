@@ -35,6 +35,14 @@ subnav:
 favicon: /images/favicon.ico
 logo: /images/d-107.png
 
+# friend links
+friends:
+  AprilBlank: http://www.aprilblank.com
+  大白: http://blog.csdn.net/qq_27948659
+  Sgclzqq: http://www.sgclzqq.com/
+  Wait: https://93xiaosi.github.io/
+  Wang WeiQiang: https://thekingstyle.github.io/
+
 # stylesheets loaded in the <head>
 stylesheets:
 - /css/sense.css

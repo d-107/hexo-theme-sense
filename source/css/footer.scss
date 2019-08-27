@@ -6,12 +6,28 @@
   width: 100%;
   text-align: center;
   color: #333;
-  .footer-copy{
-    margin-bottom:25px;
+
+  .footer-copy {
+    margin-bottom: 25px;
   }
+
   a {
     background: transparent;
     text-decoration: none;
     color: #56B4D3;
+  }
+
+  .site-nav {
+    list-style: none;
+    margin-bottom: 30px;
+    .nav-link {
+      display: inline-block;
+      &:after{
+        content: '|';
+      }
+      &:last-child:after{
+        content: '';
+      }
+    }
   }
 }
