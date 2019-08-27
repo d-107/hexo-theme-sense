@@ -376,7 +376,7 @@ h1 {
     right: 0;
     top: 75px;
     height: auto;
-    background: rgba(255, 255, 255, 0.5);
+    background: linear-gradient(200deg, #a0cfe4, #e8c37e);
     text-align: center;
   }
 }
@@ -481,6 +481,14 @@ h1 {
 }
 .content .content-inner .recent-posts .recent-post-item {
   margin: 0 auto;
+  position: relative;
+}
+.content .content-inner .recent-posts .recent-post-item .new-article-tag {
+  position: absolute;
+  left: -45px;
+  top: 14px;
+  color: #fb929e;
+  font-size: 22px;
 }
 .content .content-inner .recent-posts .recent-post-item h1 {
   position: relative;
@@ -524,14 +532,6 @@ h1 {
   font-weight: 400;
   line-height: 43px;
 }
-.content .content-inner .recent-posts .recent-post-item h1 .new-article {
-  font-weight: normal;
-  font-size: 24px;
-  color: #56B4D3;
-  position: absolute;
-  left: -45px;
-  bottom: 18px;
-}
 .content .content-inner .recent-posts .recent-post-item h1 .articles-tag {
   font-weight: normal;
   font-size: 24px;
@@ -545,6 +545,26 @@ h1 {
   opacity: 0.8;
 }
 
+@media (max-width: 860px) {
+  .content .content-inner {
+    max-width: 80%;
+  }
+  .content .content-inner .recent-posts .recent-post-item .new-article-tag {
+    display: none;
+  }
+  .content .content-inner .recent-posts .recent-post-item h1 {
+    font-size: 14px;
+  }
+  .content .content-inner .recent-posts .recent-post-item h1 .articles-tag {
+    padding: 5px;
+  }
+  .content .content-inner .recent-posts .recent-post-item h1 .post-time {
+    font-size: 8px;
+  }
+  .content .content-inner .recent-posts .recent-post-item h1 .article-link .title-href {
+    max-width: 180px;
+  }
+}
 .page-number, .space, .next {
   display: inline-block;
   *display: inline;
@@ -576,10 +596,10 @@ h1 {
   font-size: 12px;
   font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
   text-shadow: 0 1px #fff;
-  margin: 50px auto 30px auto;
+  margin: 80px auto 30px auto;
   width: 100%;
   text-align: center;
-  color: #333;
+  color: #666;
 }
 .footer .footer-copy {
   margin-bottom: 25px;
