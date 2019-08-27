@@ -68,6 +68,10 @@ h1 {
   line-height: 50px;
 }
 
+.hide{
+  display: none;
+}
+
 @import "./header";
 @import "./video";
 @import "./go-top";

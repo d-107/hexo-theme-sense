@@ -293,6 +293,10 @@ h1 {
   line-height: 50px;
 }
 
+.hide {
+  display: none;
+}
+
 .header {
   width: 100%;
   height: 75px;
