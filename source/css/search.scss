@@ -9,6 +9,10 @@
   max-width: 0;
   overflow: hidden;
   transition: max-width .25s ease-in-out;
+  .search-inner{
+    padding: 15px;
+    overflow: scroll;
+  }
 }
 
 .show-search{

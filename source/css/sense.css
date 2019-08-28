@@ -395,6 +395,10 @@ h1 {
   overflow: hidden;
   transition: max-width 0.25s ease-in-out;
 }
+#search .search-inner {
+  padding: 15px;
+  overflow: scroll;
+}
 
 .show-search {
   max-width: 360px !important;
