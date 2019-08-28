@@ -401,32 +401,31 @@ h1 {
   right: 0;
   top: 0;
   z-index: 99999;
-  background: linear-gradient(200deg, #a0cfe4, #e8c37e);
   max-width: 0;
   overflow: hidden;
   transition: max-width 0.25s ease-in-out;
+  background: linear-gradient(200deg, #a0cfe4, #e8c37e);
 }
 #search .search-inner {
   padding: 15px;
-  width: 360px;
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
 }
 #search .search-inner .search-inner-wrap {
   height: 100%;
-  padding: 30px;
+  padding: 30px 15px;
   overflow-x: hidden;
   overflow-y: auto;
 }
 #search .search-inner .search-inner-wrap #search-tags {
   list-style: none;
+  margin: 25px auto;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  padding: 15px;
 }
 #search .search-inner .search-inner-wrap #search-tags li {
-  float: left;
-  margin-right: 10px;
-}
-#search .search-inner .search-inner-wrap #search-tags li a {
   display: inline-block;
   text-decoration: none;
   font-weight: normal;
@@ -446,7 +445,7 @@ h1 {
 }
 #search .search-inner .search-inner-wrap .search-input-inner .search-input {
   padding: 5px 10px;
-  width: 100%;
+  width: 80%;
   background: none;
   border: 1px solid #fff;
 }

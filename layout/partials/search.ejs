@@ -8,7 +8,7 @@
             <% if (site.tags.length > 0) { %>
                 <ul id="search-tags" data-count="<%=site.tags.length%>">
                     <% site.tags.each(function(tag) { %>
-                        <li data-url="<%=config.root + tag.path%>" ><a><%=tag.name%></a></li>
+                        <li data-url="<%=config.root + tag.path%>" ><%=tag.name%></li>
                     <% }); %>
                 </ul>
             <% } %>
