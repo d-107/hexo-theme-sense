@@ -24,7 +24,7 @@
       }
     }
 
-    .nav-toggle-btn {
+    .nav-toggle-btn, .search-toggle-btn {
       height: 75px;
       line-height: 75px;
       display: inline-block;
@@ -65,7 +65,7 @@
             bottom: 10px;
             height: 3px;
             transition: max-width .25s ease-in-out;
-            background: linear-gradient(to right, #fb929e, #b4b4ff, #56B4D3);
+            background: linear-gradient(to right,#fb929e,#b4b4ff, #aedefc);
             opacity: .5;
           }
 
@@ -93,11 +93,12 @@
 
 @media (max-width: 860px) {
   .header .header-nav .site-nav {
-    width: 100px;
+    width:360px;
+    height: 100vh;
     position: absolute;
     right: 0;
-    top: 75px;
-    height: auto;
+    top: 0;
+    z-index: 9999;
     background: linear-gradient(200deg,#a0cfe4,#e8c37e);
     text-align: center;
   }

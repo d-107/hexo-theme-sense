@@ -14,15 +14,15 @@
 
 ::-webkit-scrollbar-thumb {
   border-radius: 0;
-  background: linear-gradient(to bottom, #fb929e, #b4b4ff, #56B4D3)
+  background: linear-gradient(to bottom, #a0cfe4, #e8c37e)
 }
 
 ::-webkit-scrollbar-thumb:vertical:hover {
-  background: linear-gradient(to bottom, #fb929e, #b4b4ff, #56B4D3)
+  background: linear-gradient(to bottom, #a0cfe4, #e8c37e)
 }
 
 ::-webkit-scrollbar-thumb:vertical:active {
-  background: linear-gradient(to bottom, #fb929e, #b4b4ff, #56B4D3)
+  background: linear-gradient(to bottom, #a0cfe4, #e8c37e)
 }
 
 //scrollbar
@@ -32,5 +32,5 @@
   height: 3px;
   transition-duration: 1s, 1s;
   z-index: 99999;
-  background: #56B4D3;
+  background: #a0cfe4;
 }

@@ -1,0 +1,16 @@
+#search{
+  width:360px;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+  background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+  max-width: 0;
+  overflow: hidden;
+  transition: max-width .25s ease-in-out;
+}
+
+.show-search{
+  max-width: 360px!important;
+}

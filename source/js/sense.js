@@ -13,7 +13,9 @@ $(function () {
     }
     return false;
   });
-
+  $('.site-nav').click(() => {
+      return false;
+  });
   $(document).on('click',function(){
     hideMenu();
   });
@@ -30,7 +32,7 @@ $(function () {
     if ($('.site-nav').hasClass('show-nav')) {
       $('.nav-toggle-btn').children('i').html('&#xe600;');
       $('.site-nav').removeClass('show-nav');
-    } 
+    }
   }
 
   $('#go-top').click(() => {

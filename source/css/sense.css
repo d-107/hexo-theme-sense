@@ -212,15 +212,15 @@
 
 ::-webkit-scrollbar-thumb {
   border-radius: 0;
-  background: linear-gradient(to bottom, #fb929e, #b4b4ff, #56B4D3);
+  background: linear-gradient(to bottom, #a0cfe4, #e8c37e);
 }
 
 ::-webkit-scrollbar-thumb:vertical:hover {
-  background: linear-gradient(to bottom, #fb929e, #b4b4ff, #56B4D3);
+  background: linear-gradient(to bottom, #a0cfe4, #e8c37e);
 }
 
 ::-webkit-scrollbar-thumb:vertical:active {
-  background: linear-gradient(to bottom, #fb929e, #b4b4ff, #56B4D3);
+  background: linear-gradient(to bottom, #a0cfe4, #e8c37e);
 }
 
 .scrollbar {
@@ -229,7 +229,7 @@
   height: 3px;
   transition-duration: 1s, 1s;
   z-index: 99999;
-  background: #56B4D3;
+  background: #a0cfe4;
 }
 
 @font-face {
@@ -320,7 +320,7 @@ h1 {
   vertical-align: middle;
   margin-top: 15px;
 }
-.header .header-nav .nav-toggle-btn {
+.header .header-nav .nav-toggle-btn, .header .header-nav .search-toggle-btn {
   height: 75px;
   line-height: 75px;
   display: inline-block;
@@ -360,7 +360,7 @@ h1 {
   bottom: 10px;
   height: 3px;
   transition: max-width 0.25s ease-in-out;
-  background: linear-gradient(to right, #fb929e, #b4b4ff, #56B4D3);
+  background: linear-gradient(to right, #fb929e, #b4b4ff, #aedefc);
   opacity: 0.5;
 }
 .header .header-nav .site-nav .nav-link a:hover:after {
@@ -375,15 +375,33 @@ h1 {
 
 @media (max-width: 860px) {
   .header .header-nav .site-nav {
-    width: 100px;
+    width: 360px;
+    height: 100vh;
     position: absolute;
     right: 0;
-    top: 75px;
-    height: auto;
+    top: 0;
+    z-index: 9999;
     background: linear-gradient(200deg, #a0cfe4, #e8c37e);
     text-align: center;
   }
 }
+#search {
+  width: 360px;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+  background: linear-gradient(200deg, #a0cfe4, #e8c37e);
+  max-width: 0;
+  overflow: hidden;
+  transition: max-width 0.25s ease-in-out;
+}
+
+.show-search {
+  max-width: 360px !important;
+}
+
 .video-box {
   padding: 0;
   margin-bottom: 30px;
@@ -440,7 +458,7 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -65%);
-  z-index: 999999;
+  z-index: 99;
 }
 .video-box .video .video-inner .social {
   margin-top: 25px;
@@ -591,8 +609,8 @@ h1 {
 
 .current {
   color: #fff;
-  background-color: #56B4D3;
-  border: 1px solid #56B4D3;
+  background-color: #a0cfe4;
+  border: 1px solid #a0cfe4;
   cursor: not-allowed !important;
 }
 
@@ -611,7 +629,7 @@ h1 {
 .footer a {
   background: transparent;
   text-decoration: none;
-  color: #56B4D3;
+  color: #a0cfe4;
 }
 .footer .site-nav {
   list-style: none;
