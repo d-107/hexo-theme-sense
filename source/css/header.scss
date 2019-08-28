@@ -2,7 +2,10 @@
 .header {
   width: 100%;
   height: 75px;
-  -webkit-transition: all .4s ease;
+  -webkit-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
   transition: all .4s ease;
   position: fixed;
   z-index: 9999;
@@ -41,6 +44,10 @@
       list-style: none;
       user-select: none;
       transition: max-width .5s ease-in-out;
+      -webkit-transition: max-width .5s ease-in-out;
+      -ms-transition: max-width .5s ease-in-out;
+      -o-transition: max-width .5s ease-in-out;
+      -moz-transition: max-width .5s ease-in-out;
       overflow: hidden;
       max-width: 0px;
 
@@ -63,6 +70,10 @@
             bottom: 10px;
             height: 3px;
             transition: max-width .25s ease-in-out;
+            -webkit-transition: max-width .25s ease-in-out;
+            -ms-transition: max-width .25s ease-in-out;
+            -o-transition: max-width .25s ease-in-out;
+            -moz-transition: max-width .25s ease-in-out;
             background: linear-gradient(to right, #fb929e, #b4b4ff, #aedefc);
             opacity: .5;
           }

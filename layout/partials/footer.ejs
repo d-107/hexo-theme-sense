@@ -6,9 +6,7 @@
         <div class="site-nav">
             <% Object.keys(theme.friends).forEach(function(key) { %>
                 <li class="nav-link">
-                    <a <% if(is_current(theme.menu[key])){ %>class="active" <% } %>href="<%= theme.menu[key] %>">
-                        <%= key %>
-                    </a>
+                    <a href="<%= theme.friends[key] %>" target="_blank"><%= key %></a>
                 </li>
             <% }); %>
         </div>
@@ -19,9 +17,14 @@
     </div>
 </footer>
 
+<% if(theme.sakura){%>
+    <%- js('/js/sakura') %>
+<% }%>
 <% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
     <!-- scripts list from theme config.yml -->
     <% theme.scripts.forEach(function(url) { %>
-    <script src="<%=url%>"></script>
+        <script src="<%=url%>"></script>
     <% }); %>
 <% } %>
+
+

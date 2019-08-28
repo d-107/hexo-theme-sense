@@ -37,11 +37,12 @@ logo: /images/d-107.png
 
 # friend links
 friends:
+  M-finder: https://www.m-finder.com
   AprilBlank: http://www.aprilblank.com
   大白: http://blog.csdn.net/qq_27948659
   Sgclzqq: http://www.sgclzqq.com/
   Wait: https://93xiaosi.github.io/
-  Wang WeiQiang: https://thekingstyle.github.io/
+  WangWeiQiang: https://thekingstyle.github.io/
 
 # stylesheets loaded in the <head>
 stylesheets:
@@ -50,6 +51,7 @@ stylesheets:
 # scripts loaded in the end of the body
 scripts:
 - /js/jquery-3.4.1.min.js
-- /js/sakura.js
 - /js/sense.js
 
+# 樱花飘落效果
+sakura: true

@@ -1,27 +1,29 @@
 
 <div id="search" class="">
     <div class="search-inner">
-        <h1>查找</h1>
-        <div>
-            <input id="txtsearch" class="search-input" placeholder="写点儿什么吧" />
-        </div>
-        <% if (site.tags.length > 0) { %>
-            <ul id="search-tags" data-count="<%=site.tags.length%>">
-                <% site.tags.each(function(tag) { %>
-                <li data-url="<%=config.root + tag.path%>" ><%=tag.name%></li>
+        <div class="search-inner-wrap">
+            <div class="search-input-inner">
+                <input id="txtsearch" class="search-input" placeholder="写点儿什么吧" />
+            </div>
+            <% if (site.tags.length > 0) { %>
+                <ul id="search-tags" data-count="<%=site.tags.length%>">
+                    <% site.tags.each(function(tag) { %>
+                        <li data-url="<%=config.root + tag.path%>" ><a><%=tag.name%></a></li>
+                    <% }); %>
+                </ul>
+            <% } %>
+
+            <ul id="search-articles">
+                <% site.posts.sort('date', -1).each(function(post) { %>
+                    <li data-url="<%= config.root + post.path %>" data-date="<%= date(post.date) %>"
+                        data-name="<%=post.title%>" class="search-article hide">
+                        <span class="search-article-name"><%=post.title%></span>
+                        <% post.tags.each(function(tag) { %>
+                            <span class="search-articles-tag"><%=tag.name %></span>
+                        <% }); %>
+                    </li>
                 <% }); %>
             </ul>
-        <% } %>
-
-        <ul id="search-articles">
-            <% site.posts.sort('date', -1).each(function(post) { %>
-                <li data-url="<%= config.root + post.path %>" class="search-article hide">
-                    <span class="search-article-name"><%=post.title%></span>
-                    <% post.tags.each(function(tag) { %>
-                        <span class="search-articles-tag"><%=tag.name %></span>
-                    <% }); %>
-                </li>
-            <% }); %>
-        </ul>
+        </div>
     </div>
 </div>

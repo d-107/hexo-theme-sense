@@ -11,7 +11,54 @@
   transition: max-width .25s ease-in-out;
   .search-inner{
     padding: 15px;
-    overflow: scroll;
+    width: 360px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .search-inner-wrap{
+      height: 100%;
+      padding: 30px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      #search-tags{
+        list-style: none;
+        li{
+          float: left;
+          margin-right:10px;
+          a{
+            display: inline-block;
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 10px;
+            color: #fff;
+            height: 18px;
+            line-height: 18px;
+            float: left;
+            padding: 0 5px 0px 10px;
+            position: relative;
+            border-radius: 0 5px 5px 0;
+            margin: 5px 9px 5px 8px;
+            font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
+          }
+        }
+      }
+      .search-input-inner{
+        text-align: center;
+        .search-input{
+          padding: 5px 10px;
+          width: 100%;
+          background: none;
+          border: 1px solid #fff;
+          &::placeholder {
+            color: #fff;
+            opacity: 1;
+          }
+        }
+      }
+      #search-articles{
+        padding-bottom: 50px;
+      }
+    }
   }
 }
 
