@@ -3,7 +3,7 @@ $(function () {
 
   let articles = new Array();
 
-  $('.nav-toggle-btn').click(() => {
+  $('.nav-toggle-btn').click((event) => {
     if ($('.site-nav').hasClass('show-nav')) {
       $('.nav-toggle-btn').children('i').html('&#xe600;');
       $('.site-nav').removeClass('show-nav');
@@ -11,29 +11,48 @@ $(function () {
       $('.nav-toggle-btn').children('i').html('&#xe77c;');
       $('.site-nav').addClass('show-nav');
     }
-    return false;
+      event.stopPropagation()
   });
-  $('.site-nav').click(() => {
-      return false;
+
+  $('.site-nav').click((event) => {
+      event.stopPropagation()
   });
+
   $(document).on('click',function(){
     hideMenu();
   });
+
   //滚动事件
-  $(document).on('mousewheel',function(){
-    hideMenu();
-  });
+  // $(document).on('mousewheel',function(){
+  //   hideMenu();
+  // });
   //滑动事件
-  $(document).on('touchmove',function(){
-    hideMenu();
-  });
+  // $(document).on('touchmove',function(){
+  //   hideMenu();
+  // });
 
   function hideMenu(){
     if ($('.site-nav').hasClass('show-nav')) {
       $('.nav-toggle-btn').children('i').html('&#xe600;');
       $('.site-nav').removeClass('show-nav');
     }
+    if ($('#search').hasClass('show-search')) {
+      $('#search').removeClass('show-search');
+    }
   }
+
+  $('.search-toggle-btn').click((event)=>{
+      if ($('#search').hasClass('show-search')) {
+          $('#search').removeClass('show-search');
+      } else {
+          $('#search').addClass('show-search');
+      }
+      event.stopPropagation()
+  });
+
+   $('#search').click((event) => {
+      event.stopPropagation()
+   });
 
   $('#go-top').click(() => {
     $('body,html').animate({ scrollTop: 0 }, 700);

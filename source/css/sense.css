@@ -306,7 +306,7 @@ h1 {
   z-index: 9999;
   top: 0;
   display: block;
-  background-color: rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, rgba(232, 195, 126, 0.5), rgba(160, 207, 228, 0.5));
 }
 .header .header-nav {
   margin: 0 55px;
@@ -327,7 +327,6 @@ h1 {
   float: right;
   margin-left: 15px;
   padding: 0 10px;
-  transition: all 0.2s ease;
   color: #fff;
 }
 .header .header-nav .site-nav {
@@ -336,8 +335,7 @@ h1 {
   float: right;
   list-style: none;
   user-select: none;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  transition: max-width 0.5s ease-in-out;
   overflow: hidden;
   max-width: 0px;
 }
@@ -375,7 +373,7 @@ h1 {
 
 @media (max-width: 860px) {
   .header .header-nav .site-nav {
-    width: 360px;
+    width: 105px;
     height: 100vh;
     position: absolute;
     right: 0;

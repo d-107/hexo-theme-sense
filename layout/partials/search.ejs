@@ -12,17 +12,14 @@
         </ul>
     <% } %>
 
-    <% if (site.posts.length > 0) { %>
-        <ul id="search-articles" data-count="<%=page.posts.length %>">
-            <% site.posts.sort('date', -1).each(function(post) { %>
-                <li data-url="<%= config.root + post.path %>" data-date="<%= date(post.date) %>"
-                    data-name="<%=post.title%>" class="search-article hide">
-                    <span class="search-article-name">11111111<%=post.title%></span>
-                    <% post.tags.each(function(tag) { %>
-                        <span class="search-articles-tag"><%=tag.name %></span>
-                    <% }); %>
-                </li>
-            <% }); %>
-        </ul>
-    <% } %>
+    <ul id="search-articles">
+        <% site.posts.sort('date', -1).each(function(post) { %>
+            <li data-url="<%= config.root + post.path %>" class="search-article hide">
+                <span class="search-article-name"><%=post.title%></span>
+                <% post.tags.each(function(tag) { %>
+                    <span class="search-articles-tag"><%=tag.name %></span>
+                <% }); %>
+            </li>
+        <% }); %>
+    </ul>
 </div>
