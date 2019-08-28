@@ -107,6 +107,7 @@ $(function () {
     }
     for(let i=0;i<articles.length;i++) {
       let article = articles[i];
+      console.log(article)
       index = -1;
       if(isTag) {
         if(article.tags.indexOf(value) >=0){
