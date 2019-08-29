@@ -52,6 +52,11 @@ stylesheets:
 scripts:
 - /js/jquery-3.4.1.min.js
 - /js/sense.js
+- /js/image-view.js
 
 # 樱花飘落效果
 sakura: true
+# 雪花效果
+snow: true
+# 点击爆炸效果
+firework: true
