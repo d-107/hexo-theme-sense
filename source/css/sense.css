@@ -439,6 +439,29 @@ h1 {
   border-radius: 0 5px 5px 0;
   margin: 5px 9px 5px 8px;
   font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
+  background: #cc8167;
+}
+#search .search-inner .search-inner-wrap #search-tags li:before {
+  content: " ";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 0;
+  left: -18px;
+  border: 9px solid transparent;
+  border-right-color: #cc8167;
+}
+#search .search-inner .search-inner-wrap #search-tags li:after {
+  content: " ";
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 7px;
+  left: 2px;
 }
 #search .search-inner .search-inner-wrap .search-input-inner {
   text-align: center;
@@ -448,6 +471,7 @@ h1 {
   width: 80%;
   background: none;
   border: 1px solid #fff;
+  color: #fff;
 }
 #search .search-inner .search-inner-wrap .search-input-inner .search-input::placeholder {
   color: #fff;
