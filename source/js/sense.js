@@ -18,7 +18,7 @@ $(function () {
     event.stopPropagation()
   });
 
-  $(document).on('click',function(){
+  $(document).on('click', function () {
     hideMenu();
   });
 
@@ -31,7 +31,7 @@ $(function () {
   //   hideMenu();
   // });
 
-  function hideMenu(){
+  function hideMenu() {
     if ($('.site-nav').hasClass('show-nav')) {
       $('.nav-toggle-btn').children('i').html('&#xe600;');
       $('.site-nav').removeClass('show-nav');
@@ -41,8 +41,8 @@ $(function () {
     }
   }
 
-  $('.search-toggle-btn').click((event)=>{
-    console.log($('#search').hasClass('show-search'))
+  $('.search-toggle-btn').click((event) => {
+    //console.log($('#search').hasClass('show-search'))
     if ($('#search').hasClass('show-search')) {
       $('#search').removeClass('show-search');
     } else {
@@ -70,39 +70,39 @@ $(function () {
   function find(value) {
     const lists = $('.search-article');
     //每次查询前,隐藏
-    lists.each(function(){
+    lists.each(function () {
       $(this).addClass('hide');
     });
     let arr = new Array();
-    if(value.trim().length<=0)return arr;
+    if (value.trim().length <= 0) return arr;
     let isTag = false;
     let index = -1;
 
-    if(value.indexOf('#') == 0) {
-      isTag =true;
-      value = value.replace('#','');
+    if (value.indexOf('#') == 0) {
+      isTag = true;
+      value = value.replace('#', '');
     }
-    for(let i=0;i<articles.length;i++) {
+    for (let i = 0; i < articles.length; i++) {
       let article = articles[i];
-      console.log(article)
+      //console.log(article)
       index = -1;
-      if(isTag) {
-        if(article.tags.indexOf(value) >=0){
+      if (isTag) {
+        if (article.tags.indexOf(value) >= 0) {
           index = article.index;
         }
-      }else {
-        if(article.name.indexOf(value) >=0) {
+      } else {
+        if (article.name.indexOf(value) >= 0) {
           index = article.index;
         }
       }
-      if(index>0) {
+      if (index > 0) {
         //console.log(article);
         arr.push(index);
       }
     }
-    if(arr.length>0) {
-      for(let i=0;i<lists.length;i++) {
-        if(arr.indexOf(i) >=0) {
+    if (arr.length > 0) {
+      for (let i = 0; i < lists.length; i++) {
+        if (arr.indexOf(i) >= 0) {
           $(lists[i]).removeClass('hide');
         }
       }
@@ -135,10 +135,10 @@ $(function () {
     search();
   });
 
-  $('#search-tags').children().each(function(){
-    $(this).on('click',function(){
+  $('#search-tags').children().each(function () {
+    $(this).on('click', function () {
       $('#txtsearch').val('');
-      const value = '#'+$(this).html().trim();
+      const value = '#' + $(this).html().trim();
       $('#txtsearch').val(value);
       find(value);
     });
@@ -158,21 +158,44 @@ $(function () {
     let e = $('#go-top');
     $(window).scroll(function () {
       $(this).scrollTop() > 200
-          ? (e.addClass('go-top-is-visible'),
-              $('.header').css({ 'box-shadow': '0 1px 40px -8px rgba(0, 0, 0, .5)' }),
-              $(window).height() > 950
-                  ? $('.go-top.go-top-is-visible').css('top', '0')
-                  : $('.go-top.go-top-is-visible').css('top', `${$(window).height() - 950}px`))
-          : ($('.go-top.go-top-is-visible').css('top', '-900px'),
-              e.removeClass('go-top-is-visible go-top-fade-out'),
-              $('.header').css({ 'box-shadow': 'none' }));
+        ? (e.addClass('go-top-is-visible'),
+          $('.header').css({ 'box-shadow': '0 1px 40px -8px rgba(0, 0, 0, .5)' }),
+          $(window).height() > 950
+            ? $('.go-top.go-top-is-visible').css('top', '0')
+            : $('.go-top.go-top-is-visible').css('top', `${$(window).height() - 950}px`))
+        : ($('.go-top.go-top-is-visible').css('top', '-900px'),
+          e.removeClass('go-top-is-visible go-top-fade-out'),
+          $('.header').css({ 'box-shadow': 'none' }));
       $(this).scrollTop() > 1200 && e.addClass('go-top-fade-out');
     });
+  }
+
+  function initImg() {
+    $(document.body).append('<div id="imgView"></div>');
+    let data = [];
+    let items = $('#post').find('img');
+    if (items && items.length > 0) {
+      for (let i = 0; i < items.length; i++) {
+        const img = $(items[i]).attr('src');
+        if (img.length <= 0) continue;
+        data.push(img);
+      }
+      items.each(function () {
+        $(this).on('click', function () {
+          var options = {
+            dataList: data,
+            currentSrc: $(this).attr('src')
+          };
+          ImgView("imgView", options);
+        });
+      });
+    }
   }
 
   scrollBar();
   goTop();
 
   initArticles();
+  initImg();
 });
 

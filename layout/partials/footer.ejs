@@ -26,5 +26,10 @@
         <script src="<%=url%>"></script>
     <% }); %>
 <% } %>
-
+<% if(theme.snow){%>
+    <%- js('/js/snow') %>
+<% }%>
+<% if(theme.firework){%>
+    <%- js('/js/firework') %>
+<% }%>
 
