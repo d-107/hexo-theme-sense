@@ -15,12 +15,12 @@
   border-radius: 4px;
   padding: 10px;
   visibility: visible;
-  background: #fff url(./images/loading.gif) no-repeat center;
+  background: #fff url(../images/loading.gif) no-repeat center;
   -moz-transition: transform .6s, margin .6s;
   -webkit-transition: transform .6s, margin .6s;
   -o-transition: transform .6s, margin .6s;
   transition: transform .6s, margin .6s;
-  cursor: -webkit-grab;
+  cursor: url(../cursor/ayuda.cur), auto;
   -webkit-backface-visibility: hidden;
   -webkit-animation: flyin .5s;
   -moz-animation: flyin .5s;
@@ -79,7 +79,7 @@
 }
 
 .close-dialog {
-  background: url(./images/photoTheater.png) no-repeat -1px -128px;
+  background: url(../images/photoTheater.png) no-repeat -1px -128px;
   width: 20px;
   height: 20px;
   overflow: hidden;
@@ -91,7 +91,7 @@
 }
 
 .rotate-dialog {
-  background-image: url(./images/rotate.png);
+  background-image: url(../images/rotate.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -117,7 +117,7 @@
 .dialog-tool .next-dialog,
 .dialog-tool .next-dialog:hover,
 .dialog-tool .previous-dialog:hover {
-  background: url(./images/photoTheater.png) no-repeat 0 0;
+  background: url(../images/photoTheater.png) no-repeat 0 0;
   background-position-x: 0px;
   background-position-y: 0px;
   width: 66px;
