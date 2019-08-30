@@ -17,7 +17,7 @@
                 <% site.posts.sort('date', -1).each(function(post) { %>
                     <li data-url="<%= config.root + post.path %>" data-date="<%= date(post.date) %>"
                         data-name="<%=post.title%>" class="search-article hide">
-                        <span class="search-article-name"><%=post.title%></span>
+                        <span class="search-article-name"><i class="icon-quo-left icon"></i><%=post.title%></span>
                         <% post.tags.each(function(tag) { %>
                             <span class="search-articles-tag"><%=tag.name %></span>
                         <% }); %>

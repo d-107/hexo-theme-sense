@@ -463,6 +463,29 @@ h1 {
   top: 7px;
   left: 2px;
 }
+#search .search-inner .search-inner-wrap #search-articles {
+  color: #fff;
+  width: 100%;
+  margin: 15px auto;
+  overflow: hidden;
+  list-style: none;
+}
+#search .search-inner .search-inner-wrap #search-articles .search-article-name {
+  overflow: hidden;
+  width: 280px;
+  height: 24px;
+  line-height: 24px;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: block;
+}
+#search .search-inner .search-inner-wrap #search-articles .search-article-name i {
+  margin-right: 5px;
+}
+#search .search-inner .search-inner-wrap #search-articles .search-articles-tag {
+  font-size: 8px;
+}
 #search .search-inner .search-inner-wrap .search-input-inner {
   text-align: center;
 }
