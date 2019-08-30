@@ -144,6 +144,15 @@ $(function () {
     });
   });
 
+  $('.search-articles-tag').each(function () {
+    $(this).on('click', function () {
+      $('#txtsearch').val('');
+      const value = '#' + $(this).html().trim();
+      $('#txtsearch').val(value);
+      find(value);
+    });
+  });
+
   function scrollBar() {
     document.body.clientWidth > 860 && $(window).scroll(() => {
       let e = $(window).scrollTop();
