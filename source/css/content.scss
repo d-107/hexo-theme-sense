@@ -84,6 +84,7 @@
     }
 
     .article-detail {
+      margin-top:160px;
       .article-header {
         margin-top: 45px;
         border-left: 5px solid #4d4d4d;
@@ -102,15 +103,12 @@
 
       .article-entry {
         line-height: 28px;
-
+        img {
+          max-width: 100%;
+        }
         p {
           margin-top: 10px;
         }
-
-        image {
-          max-width: 100%;
-        }
-
         h1, h2, h3, h4, h5, h6 {
           margin-top: 20px;
           font-weight: bold;
