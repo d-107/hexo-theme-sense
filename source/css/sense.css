@@ -731,7 +731,7 @@ h1 {
 .content .content-inner .article-detail .article-entry image {
   max-width: 100%;
 }
-.content .content-inner .article-detail .article-entry h2, .content .content-inner .article-detail .article-entry h3, .content .content-inner .article-detail .article-entry h4, .content .content-inner .article-detail .article-entry h5, .content .content-inner .article-detail .article-entry h6 {
+.content .content-inner .article-detail .article-entry h1, .content .content-inner .article-detail .article-entry h2, .content .content-inner .article-detail .article-entry h3, .content .content-inner .article-detail .article-entry h4, .content .content-inner .article-detail .article-entry h5, .content .content-inner .article-detail .article-entry h6 {
   margin-top: 20px;
   font-weight: bold;
   color: #574C4C;

@@ -103,8 +103,8 @@ SakuraList.prototype.size = function () {
 
 function startSakura() {
   requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame;
-  const canvas = document.createElement('canvas'); let
-      cxt;
+  const canvas = document.createElement('canvas');
+  let cxt;
   staticx = true;
   canvas.height = window.innerHeight;
   canvas.width = window.innerWidth;
