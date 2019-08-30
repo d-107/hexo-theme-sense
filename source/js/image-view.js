@@ -156,7 +156,7 @@
         },
         keyClose: function (_this,event) {
             var e = event || window.event;
-            console.log(e.keyCode);
+            //console.log(e.keyCode);
             if (e.keyCode === 27) {
                 //window.removeEventListener("keydown");
                 _this.close(_this);

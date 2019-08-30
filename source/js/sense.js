@@ -182,7 +182,7 @@ $(function () {
   function initImg() {
     $(document.body).append('<div id="imgView"></div>');
     let data = [];
-    let items = $('#post').find('img');
+    let items = $('article').find('img');
     if (items && items.length > 0) {
       for (let i = 0; i < items.length; i++) {
         const img = $(items[i]).attr('src');
