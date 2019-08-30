@@ -715,9 +715,9 @@ h1 {
 }
 .content .content-inner .article-detail .article-header {
   margin-top: 45px;
-  border-left: 5px solid #4d4d4d;
-  padding: 10px 0 10px 25px;
+  padding: 10px 0 10px 0px;
   margin-bottom: 45px;
+  border-bottom: 1px solid #dcdcdc;
 }
 .content .content-inner .article-detail .article-header .article-title {
   color: #696969;
@@ -729,6 +729,10 @@ h1 {
 }
 .content .content-inner .article-detail .article-entry {
   line-height: 28px;
+  padding: 35px;
+}
+.content .content-inner .article-detail .article-entry a {
+  color: #08c;
 }
 .content .content-inner .article-detail .article-entry ul, .content .content-inner .article-detail .article-entry ol {
   list-style: none;
@@ -759,6 +763,25 @@ h1 {
   color: #574C4C;
   padding-bottom: 5px;
   border-bottom: 1px solid #ddd;
+}
+.content .content-inner .article-detail #article-nav {
+  padding: 20px 32px 10px;
+  min-height: 30px;
+  border-top: 1px solid #dcdcdc;
+}
+.content .content-inner .article-detail #article-nav #article-nav-older {
+  float: right;
+}
+.content .content-inner .article-detail #article-nav .article-nav-link-wrap {
+  font-size: 14px;
+  color: #08c;
+}
+.content .content-inner .article-detail #article-nav .article-nav-link-wrap .article-nav-title {
+  display: inline-block;
+  font-size: 16px;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 @media (max-width: 860px) {
