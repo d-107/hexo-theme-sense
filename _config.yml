@@ -57,6 +57,8 @@ scripts:
 # 樱花飘落效果
 sakura: true
 # 雪花效果
-snow: true
+snow: false
 # 点击爆炸效果
 firework: true
+# 雨滴效果
+rain: true
