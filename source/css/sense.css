@@ -708,6 +708,9 @@ h1 {
 .content .content-inner .recent-posts .recent-post-item h1 .articles-tag:hover {
   opacity: 0.8;
 }
+.content .content-inner .article-detail {
+  margin-top: 160px;
+}
 .content .content-inner .article-detail .article-header {
   margin-top: 45px;
   border-left: 5px solid #4d4d4d;
@@ -725,11 +728,11 @@ h1 {
 .content .content-inner .article-detail .article-entry {
   line-height: 28px;
 }
+.content .content-inner .article-detail .article-entry img {
+  max-width: 100%;
+}
 .content .content-inner .article-detail .article-entry p {
   margin-top: 10px;
-}
-.content .content-inner .article-detail .article-entry image {
-  max-width: 100%;
 }
 .content .content-inner .article-detail .article-entry h1, .content .content-inner .article-detail .article-entry h2, .content .content-inner .article-detail .article-entry h3, .content .content-inner .article-detail .article-entry h4, .content .content-inner .article-detail .article-entry h5, .content .content-inner .article-detail .article-entry h6 {
   margin-top: 20px;
