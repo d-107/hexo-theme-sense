@@ -1,6 +1,7 @@
 // content
 .content {
   width: 100%;
+  margin-top: 90px;
 
   .content-inner {
     margin: 0 auto;
@@ -81,6 +82,45 @@
         }
       }
     }
+
+    .article-detail {
+      .article-header {
+        margin-top: 45px;
+        border-left: 5px solid #4d4d4d;
+        padding: 10px 0 10px 25px;
+        margin-bottom: 45px;
+
+        .article-title {
+          color: #696969;
+          font-weight: 300;
+          line-height: 35px;
+          margin: 0px;
+          font-size: 26px;
+          transition: color .3s;
+        }
+      }
+
+      .article-entry {
+        line-height: 28px;
+
+        p {
+          margin-top: 10px;
+        }
+
+        image {
+          max-width: 100%;
+        }
+
+        h2, h3, h4, h5, h6 {
+          margin-top: 20px;
+          font-weight: bold;
+          color: #574C4C;
+          padding-bottom: 5px;
+          border-bottom: 1px solid #ddd;
+        }
+      }
+    }
+
   }
 }
 
@@ -88,10 +128,11 @@
   .content .content-inner {
     max-width: 80%;
 
-    .recent-posts .recent-post-item{
-      .new-article-tag{
+    .recent-posts .recent-post-item {
+      .new-article-tag {
         display: none;
       }
+
       h1 {
         font-size: 14px;
 

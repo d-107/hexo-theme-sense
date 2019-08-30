@@ -412,6 +412,9 @@ h1 {
   overflow-x: hidden;
   overflow-y: auto;
 }
+#search .search-inner ::-webkit-scrollbar {
+  display: none;
+}
 #search .search-inner .search-inner-wrap {
   height: 100%;
   padding: 30px 15px;
@@ -470,6 +473,12 @@ h1 {
   overflow: hidden;
   list-style: none;
 }
+#search .search-inner .search-inner-wrap #search-articles li {
+  margin: 15px auto;
+  overflow: hidden;
+  width: 100%;
+  height: 45px;
+}
 #search .search-inner .search-inner-wrap #search-articles .search-article-name {
   overflow: hidden;
   width: 280px;
@@ -479,12 +488,28 @@ h1 {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   display: block;
+  color: #fff;
 }
 #search .search-inner .search-inner-wrap #search-articles .search-article-name i {
   margin-right: 5px;
 }
+#search .search-inner .search-inner-wrap #search-articles .post-time {
+  font-size: 12px;
+  margin: 5px 5px 5px 0;
+}
+#search .search-inner .search-inner-wrap #search-articles .post-time:before {
+  font-family: "iconfont";
+  content: "";
+  color: #ffffff;
+  margin-right: 5px;
+}
 #search .search-inner .search-inner-wrap #search-articles .search-articles-tag {
-  font-size: 8px;
+  font-size: 12px;
+  margin: 5px auto;
+}
+#search .search-inner .search-inner-wrap #search-articles .search-articles-tag:before {
+  content: "#";
+  color: #ffffff;
 }
 #search .search-inner .search-inner-wrap .search-input-inner {
   text-align: center;
@@ -510,7 +535,6 @@ h1 {
 
 .video-box {
   padding: 0;
-  margin-bottom: 30px;
   text-align: center;
 }
 .video-box .video {
@@ -613,6 +637,7 @@ h1 {
 
 .content {
   width: 100%;
+  margin-top: 90px;
 }
 .content .content-inner {
   margin: 0 auto;
@@ -682,6 +707,36 @@ h1 {
 }
 .content .content-inner .recent-posts .recent-post-item h1 .articles-tag:hover {
   opacity: 0.8;
+}
+.content .content-inner .article-detail .article-header {
+  margin-top: 45px;
+  border-left: 5px solid #4d4d4d;
+  padding: 10px 0 10px 25px;
+  margin-bottom: 45px;
+}
+.content .content-inner .article-detail .article-header .article-title {
+  color: #696969;
+  font-weight: 300;
+  line-height: 35px;
+  margin: 0px;
+  font-size: 26px;
+  transition: color 0.3s;
+}
+.content .content-inner .article-detail .article-entry {
+  line-height: 28px;
+}
+.content .content-inner .article-detail .article-entry p {
+  margin-top: 10px;
+}
+.content .content-inner .article-detail .article-entry image {
+  max-width: 100%;
+}
+.content .content-inner .article-detail .article-entry h2, .content .content-inner .article-detail .article-entry h3, .content .content-inner .article-detail .article-entry h4, .content .content-inner .article-detail .article-entry h5, .content .content-inner .article-detail .article-entry h6 {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #574C4C;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
 }
 
 @media (max-width: 860px) {
@@ -1000,6 +1055,198 @@ h1 {
   100% {
     opacity: 1;
   }
+}
+.article-entry pre,
+.article-entry .highlight {
+  background: #272822;
+  margin: 10px 0;
+  padding: 10px 10px;
+  overflow: auto;
+  color: #fff;
+  font-size: 0.9em;
+  line-height: 22.4px;
+}
+
+.article-entry .highlight .gutter pre,
+.article-entry .highlight .gutter pre .line,
+.article-entry .gist .gist-file .gist-data .line-numbers {
+  color: #666;
+}
+
+.article-entry pre,
+.article-entry code {
+  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+}
+
+.article-entry code {
+  background: #eee;
+  padding: 0 0.3em;
+  border: none;
+}
+
+.article-entry pre code {
+  background: none;
+  text-shadow: none;
+  padding: 0;
+  color: #fff;
+}
+
+.article-entry .highlight {
+  border-radius: 4px;
+}
+
+.article-entry .highlight pre {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.article-entry .highlight table {
+  margin: 0;
+  width: auto;
+}
+
+.article-entry .highlight td {
+  border: none;
+  padding: 0;
+}
+
+.article-entry .highlight figcaption {
+  color: highlight-comment;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+
+.article-entry .highlight figcaption:before,
+.article-entry .highlight figcaption:after {
+  content: "";
+  display: table;
+}
+
+.article-entry .highlight figcaption:after {
+  clear: both;
+}
+
+.article-entry .highlight figcaption a {
+  float: right;
+}
+
+.article-entry .highlight .gutter pre {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.article-entry .highlight .gutter pre .line {
+  text-shadow: none;
+}
+
+.article-entry .highlight .line {
+  color: #fff;
+  min-height: 19px;
+}
+
+.article-entry .gist {
+  margin: 0 -20px;
+  border-style: solid;
+  border-color: #ddd;
+  border-width: 1px 0;
+  background: #272822;
+  padding: 15px 20px 15px 0;
+}
+
+.article-entry .gist .gist-file {
+  border: none;
+  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  margin: 0;
+}
+
+.article-entry .gist .gist-file .gist-data {
+  background: none;
+  border: none;
+}
+
+.article-entry .gist .gist-file .gist-data .line-numbers {
+  background: none;
+  border: none;
+  padding: 0 20px 0 0;
+}
+
+.article-entry .gist .gist-file .gist-data .line-data {
+  padding: 0 !important;
+}
+
+.article-entry .gist .gist-file .highlight {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.article-entry .gist .gist-file .gist-meta {
+  background: #272822;
+  color: highlight-comment;
+  font: 0.85em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: 0 0;
+  padding: 0;
+  margin-top: 1em;
+  margin-left: 20px;
+}
+
+.article-entry .gist .gist-file .gist-meta a {
+  color: #258fb8;
+  font-weight: normal;
+}
+
+.article-entry .gist .gist-file .gist-meta a:hover {
+  text-decoration: underline;
+}
+
+pre .comment {
+  color: #75715e;
+}
+
+pre .keyword,
+pre .function .keyword,
+pre .class .params {
+  color: #66d9ef;
+}
+
+pre .tag,
+pre .doctype,
+pre .params,
+pre .function,
+pre .css .value {
+  color: #fff;
+}
+
+pre .css ~ * .tag,
+pre .title,
+pre .at_rule,
+pre .at_rule .keyword,
+pre .preprocessor,
+pre .preprocessor .keyword {
+  color: #f92672;
+}
+
+pre .attribute,
+pre .built_in,
+pre .class,
+pre .css ~ * .class,
+pre .function .title {
+  color: #a6e22e;
+}
+
+pre .value,
+pre .string {
+  color: #e6db74;
+}
+
+pre .number {
+  color: #7163d7;
+}
+
+pre .id,
+pre .css ~ * .id {
+  color: #fd971f;
 }
 
 /*# sourceMappingURL=sense.css.map */
