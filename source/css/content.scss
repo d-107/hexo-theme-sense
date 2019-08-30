@@ -103,6 +103,23 @@
 
       .article-entry {
         line-height: 28px;
+        ul, ol{
+          list-style: none;
+          font-size: 14px;
+          margin: 10px 0px;
+          li:before{
+            content: "";
+            width: 6px;
+            height: 6px;
+            border: 1px solid #999;
+            border-radius: 10px;
+            background: #aaa;
+            display: inline-block;
+            margin-right: 10px;
+            float: left;
+            margin-top: 10px;
+          }
+        }
         img {
           max-width: 100%;
         }
