@@ -200,15 +200,6 @@ $(function () {
       });
     }
 
-    //雨滴效果
-    try {
-      var engine = new RainyDay({
-        image: $('img')[1]
-      });
-      engine.rain([[3, 2, 2]], 100);
-    } catch (e) { }
-  }
-
   scrollBar();
   goTop();
 

@@ -115,8 +115,7 @@ function startSakura() {
   cxt = canvas.getContext('2d');
   const sakuraList = new SakuraList();
   for (let i = 0; i < 50; i++) {
-    var sakura; var randomX; var randomY; var randomS; var randomR; var randomFnx; var
-        randomFny;
+    let sakura, randomX, randomY, randomS, randomR, randomFnx, randomFny;
     randomX = getRandom('x');
     randomY = getRandom('y');
     randomR = getRandom('r');

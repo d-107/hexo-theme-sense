@@ -60,5 +60,3 @@ sakura: true
 snow: false
 # 点击爆炸效果
 firework: true
-# 雨滴效果
-rain: true
