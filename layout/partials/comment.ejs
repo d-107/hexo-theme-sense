@@ -1,0 +1,16 @@
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        //评论issue唯一ID
+        id: '<%=page.title%>',
+        owner: '<%=theme.gitment.github_user%>',
+        repo: '<%=theme.gitment.github_repo%>',
+        oauth: {
+            client_id: '<%=theme.gitment.client_id%>',
+            client_secret: '<%=theme.gitment.client_secret%>',
+        },
+    })
+    gitment.render('container')
+</script>
