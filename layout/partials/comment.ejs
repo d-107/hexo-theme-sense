@@ -4,12 +4,12 @@
 <script>
     var gitment = new Gitment({
         //评论issue唯一ID
-        id: '<%=page.date%>',
-        owner: '<%=theme.gitment.github_user%>',
-        repo: '<%=theme.gitment.github_repo%>',
+        id: '<%= page.date %>',
+        owner: '<%= theme.gitment.github_user %>',
+        repo: '<%= theme.gitment.github_repo %>',
         oauth: {
-            client_id: '<%=theme.gitment.client_id%>',
-            client_secret: '<%=theme.gitment.client_secret%>',
+            client_id: '<%= theme.gitment.client_id %>',
+            client_secret: '<%= theme.gitment.client_secret %>',
         },
     })
     gitment.render('container')
