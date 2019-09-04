@@ -196,15 +196,24 @@
 
       .category-list .tag-list .archive-list {
         line-height: 28px;
-        padding: 35px;
         list-style: none;
         font-size: 14px;
-        margin: 10px 0px;
+        border: 1px solid #dcdcdc;
+        padding: 5px 25px;
+        border-radius: 5px;
+        margin: 5px 15px;
+        &:hover{
+          border-color: #142c5d;
+        }
+      }
+      .tag-list-item, .archive-list-item{
+        display: inline-block;
+        margin: 0 15px;
+        &:before{
+          display: none;
+        }
       }
 
-      a {
-        color: #142c5d;
-      }
 
       ul, ol {
         list-style: none;

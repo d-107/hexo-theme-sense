@@ -841,13 +841,22 @@ h1 {
 }
 .content .content-inner .archive-detail .category-list .tag-list .archive-list {
   line-height: 28px;
-  padding: 35px;
   list-style: none;
   font-size: 14px;
-  margin: 10px 0px;
+  border: 1px solid #dcdcdc;
+  padding: 5px 25px;
+  border-radius: 5px;
+  margin: 5px 15px;
 }
-.content .content-inner .archive-detail a {
-  color: #142c5d;
+.content .content-inner .archive-detail .category-list .tag-list .archive-list:hover {
+  border-color: #142c5d;
+}
+.content .content-inner .archive-detail .tag-list-item, .content .content-inner .archive-detail .archive-list-item {
+  display: inline-block;
+  margin: 0 15px;
+}
+.content .content-inner .archive-detail .tag-list-item:before, .content .content-inner .archive-detail .archive-list-item:before {
+  display: none;
 }
 .content .content-inner .archive-detail ul, .content .content-inner .archive-detail ol {
   list-style: none;
