@@ -51,9 +51,9 @@ var categoriesList = list_categories({ show_count: false }),
 <% } else { %>
   <div id="archive" class="archive-detail">
   <header class="archive-header">
-  <h1 class="archive-title"><%=page.month + '/' + page.year%></h1>
-</header>
-  
+    <h1 class="archive-title"><%=page.month + '/' + page.year%></h1>
+  </header>
+
   <% page.posts.each(function(article) { %>
     <div class="archive-item">
       <% if (article.link) { %>
