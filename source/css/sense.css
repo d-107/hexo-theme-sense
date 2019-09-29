@@ -199,7 +199,7 @@
 
 ::-webkit-scrollbar {
   width: 5px;
-  height: 10px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-button:vertical {
@@ -392,6 +392,10 @@ h1 {
   max-width: 600px;
 }
 
+.box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 40px -8px;
+}
+
 .header-bg:before {
   opacity: 1;
 }
@@ -404,7 +408,7 @@ h1 {
     right: 0;
     top: 0;
     z-index: 9999;
-    background: linear-gradient(to right, #a0cfe4, #e8c37e);
+    background: linear-gradient(200deg, #e8c37e, #a0cfe4);
     text-align: center;
   }
 }
@@ -771,7 +775,7 @@ h1 {
   font-weight: 300;
   line-height: 35px;
   margin: 0px;
-  font-size: 26px;
+  font-size: 24px;
   transition: color 0.3s;
 }
 .content .content-inner .article-detail .article-entry {
@@ -1078,6 +1082,43 @@ h1 {
 .content .content-inner .tag-detail h1 .articles-tag:hover {
   opacity: 0.8;
 }
+.content .content-inner .article-toc {
+  position: fixed;
+  top: 30vh;
+  right: -1800px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.content .content-inner .article-toc-show {
+  right: 180px;
+}
+.content .content-inner .toc {
+  width: 250px;
+  overflow: hidden;
+}
+.content .content-inner .toc-item .toc-link {
+  display: block;
+  line-height: 32px;
+}
+.content .content-inner .toc-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: block;
+  white-space: nowrap;
+}
+.content .content-inner .sidebar-title {
+  font-weight: 300;
+  color: #574C4C;
+  font-size: 20px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+.content #container {
+  clear: both;
+}
 
 @media (max-width: 860px) {
   .content .content-inner {
@@ -1097,6 +1138,13 @@ h1 {
   }
   .content .content-inner .recent-posts .recent-post-item h1 .article-link .title-href {
     max-width: 180px;
+  }
+  .content .content-inner #article-nav .article-nav-link-wrap {
+    display: none;
+  }
+
+  .article-toc {
+    display: none;
   }
 }
 .page-number, .space, .next {
@@ -1433,6 +1481,7 @@ h1 {
 
 .article-entry .highlight {
   border-radius: 4px;
+  margin: 35px auto;
 }
 
 .article-entry .highlight pre {
